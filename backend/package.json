@@ -4,12 +4,13 @@
   "description": "Backend for Goibibo Project",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server" :"nodemon src/server"
+    "server": "nodemon src/server"
   },
   "repository": {
     "type": "git",
