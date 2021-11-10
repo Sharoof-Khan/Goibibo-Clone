@@ -1,10 +1,15 @@
 const mongoose = require('mongoose')
 
 
-const connect = () => {
+const connect = async() => {
 
-    return mongoose.connect('')
+    return await mongoose.connect('mongodb+srv://goibibo:Srk123@goibibo.fpuqy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+    
     
 }
 
-await mongoose.connect('mongodb://localhost/my_database');
+
+
+
+module.exports= connect;
+// await mongoose.connect('mongodb://localhost/my_database');
