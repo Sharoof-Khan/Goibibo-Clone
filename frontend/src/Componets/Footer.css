@@ -6,8 +6,6 @@ body {
    background: white!important;
 
 }
-
-
   .Bottom-Container {
     margin: auto;
     background: white;
@@ -34,7 +32,7 @@ body {
    
   }
 
-  .links {
+  .bottom-links {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,7 +48,7 @@ body {
 
   }
   
-  .links > a {
+  .bottom-links> a {
     display: inline-flex;
     margin-top: 1rem;
     color: #777;

@@ -5,12 +5,12 @@ import "./Footer.css"
 function Footer() {
     return (
         <>
-            <div className="Bottom-Container">
+            <div className="Bottom-Container ">
                 
                 <div>
                     <p>OUR PRODUCTS </p>
                    
-                    <div className="links">
+                    <div className="bottom-links">
                     <a href>Domestic Hotels </a>
                     <a href>International Hotels</a>
                     <a href>Domestic Flights</a>
@@ -30,7 +30,7 @@ function Footer() {
 
                 <div>
                     <p>ABOUT US</p>
-                    <div className="links">
+                    <div className="bottom-links">
                     <a href>About Us</a>
                     <a href>Management</a>
                     <a href>Terms of Services</a>
@@ -48,7 +48,7 @@ function Footer() {
                 
                 <div>
                     <p>TRAVEL ESSENTIALS</p>
-                    <div className="links">
+                    <div className="bottom-links">
                         <a href>PNR Status</a>
                         <a href>Offers</a>
                         <a href>Airline Routes</a>
@@ -59,7 +59,7 @@ function Footer() {
 
                 <div>
                     <p>MORE LINKS</p>
-                    <div className="links">
+                    <div className="bottom-links">
                         <a href>Cheap Flights</a>
                         <a href>Hotels Near Me</a>
                         <a href>My Booking</a>
