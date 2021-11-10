@@ -1,0 +1,25 @@
+{
+  "name": "goibibo-backend",
+  "version": "1.0.0",
+  "description": "Backend for Goibibo Project",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon src/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sharoof-Khan/Goibibo-Backend.git"
+  },
+  "author": "Team Goibibo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sharoof-Khan/Goibibo-Backend/issues"
+  },
+  "homepage": "https://github.com/Sharoof-Khan/Goibibo-Backend#readme"
+}

@@ -1,0 +1,37 @@
+{
+  "flights_details": [
+    {
+      "id": 1,
+      "img": "https://play-lh.googleusercontent.com/OhZSLjRDLvFLqtDp9bIgcvAweZIg5V5uIMI_7kOaS-9nPR043DUfoibkn1BgwG7Ai1U",
+      "company": "air-india",
+      "from": "pune",
+      "to": "bangalore",
+      "duration": "4h55m",
+      "price": 2345,
+      "fromTime": 19,
+      "toTime": "23:55"
+    },
+    {
+      "id": 2,
+      "img": "https://play-lh.googleusercontent.com/OhZSLjRDLvFLqtDp9bIgcvAweZIg5V5uIMI_7kOaS-9nPR043DUfoibkn1BgwG7Ai1U",
+      "company": "indigo",
+      "from": "pune",
+      "to": "bangalore",
+      "duration": "3h55m",
+      "price": 2345,
+      "fromTime": "19:00",
+      "toTime": "23:55"
+    }
+  ],
+  "bookmarks": {
+    "id": 1,
+    "img": "https://play-lh.googleusercontent.com/OhZSLjRDLvFLqtDp9bIgcvAweZIg5V5uIMI_7kOaS-9nPR043DUfoibkn1BgwG7Ai1U",
+    "company": "air-india",
+    "from": "pune",
+    "to": "bangalore",
+    "duration": "4h55m",
+    "price": 2345,
+    "fromTime": 19,
+    "toTime": "23:55"
+  }
+}
