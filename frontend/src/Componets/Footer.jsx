@@ -62,9 +62,9 @@ function Footer() {
                     <div className="bottom-links">
                         <a href>Cheap Flights</a>
                         <a href>Hotels Near Me</a>
-                        <a href>My Booking</a>
+                        <a href>My Bookings</a>
                         <a href>Cancellation</a>
-                        <a href>SMy Account</a>
+                        <a href>My Account</a>
                         <a href>Wallet</a>
                         </div>
                 </div>
