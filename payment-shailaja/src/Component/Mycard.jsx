@@ -1,16 +1,17 @@
-import React, {useState} from 'react'
-import ap1 from "../imgs/am_amex_06.jpg"
-import ap2 from "../imgs/PngItem_2572317.png"
-import ap3 from "../imgs/Diners-Club-International-logo.png"
-import ap4 from "../imgs/Rupay-Logo.png"
-import ap5 from "../imgs/1200px-Maestro_logo.svg.png"
-import ap6 from "../imgs/Visa_Inc._logo.svg.png"
-import ap7 from "../imgs/2560px-MasterCard_Logo.svg.png"
+import React, { useState } from "react";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import ap1 from "../imgs/am_amex_06.jpg";
+import ap2 from "../imgs/PngItem_2572317.png";
+import ap3 from "../imgs/Diners-Club-International-logo.png";
+import ap4 from "../imgs/Rupay-Logo.png";
+import ap5 from "../imgs/1200px-Maestro_logo.svg.png";
+import ap6 from "../imgs/Visa_Inc._logo.svg.png";
+import ap7 from "../imgs/2560px-MasterCard_Logo.svg.png";
+import Pop from "./Popup";
+
 
 export default function Mycard() {
-    // function handleChange = event =>{
-    //     const 
-    // }
 const [number,setNumber] = useState("");
 const [name,setName] = useState("");
 const[date,setDate] = useState("");
@@ -21,6 +22,8 @@ const [nameErr,setNameErr] = useState({});
 const [dateErr,setDateErr] = useState({});
 const [cvvErr,setCvvErr] = useState({});
 
+
+// submit
 const onSubmit =(e)=>{
     e.preventDefault();
     const isValid = formValidation();
@@ -32,7 +35,16 @@ const onSubmit =(e)=>{
         setCvv(""); 
     }
 }
-const formValidation = ()=> {
+
+    // const shoot = () => {
+    //   alert("Congratulations! Your Seat is Booked Now");
+    // }
+    const shoot = () =>{
+        <Popup trigger={<button> Trigger</button>} position="right center">
+        <div>Popup content here !!</div>
+      </Popup>
+    }
+    const formValidation = ()=> {
     const numberErr = {};
     const nameErr = {};
     const dateErr = {};
@@ -93,7 +105,7 @@ const formValidation = ()=> {
                      <div class="form-data">
                      <div class="flex-group">
                 <h3>Card Number</h3>
-                 <input value = {number} onChange={(e)=>{setNumber(e.target.value)}} type="text" class="card-number" placeholder="Card Number"/>
+                 <input value = {number} onChange={(e)=>{setNumber(e.target.value)}} pattern="[0-9]*" inputmode="numeric"  class="card-number" placeholder="Card Number"/>
                  {Object.keys(numberErr).map((key) => {
                      return <div style={{color:"red"}}>{numberErr[key]}</div>
                      })}
@@ -119,23 +131,25 @@ const formValidation = ()=> {
                 <div class="form-data ">
                 <div class="expiry one">
                      <h3>Expiry Date</h3>
-                     <input value = {date} onChange={(e)=>{setDate(e.target.value)}} type="text" class="card" placeholder="MM/YY" />
-                     {Object.keys(dateErr).map((key)=>{
+                     <input value = {date} onChange={(e)=>{setDate(e.target.value)}} inputmode="numeric" type="text" class="card" placeholder="MM/YY" />
+                     {Object.keys(dateErr).map((key)=>{ 
                      return <div style={{color:"red"}}>{dateErr[key]}</div>
                      })}
                  </div>
                  <div class="expiry">
                      <h3>Enter CVV</h3>
-                     <input value = {cvv} onChange={(e)=>{setCvv(e.target.value)}} type="password" class="card" placeholder="CVV NO."/>
+                     <input value = {cvv} onChange={(e)=>{setCvv(e.target.value)}} pattern="[0-9]*" inputmode="numeric" type="password" class="card" placeholder="CVV NO."/>
                      {Object.keys(cvvErr).map((key)=>{
                      return <div style={{color:"red"}}>{cvvErr[key]}</div>
                      })}
                  </div>
                </div>
-             <button type="submit" class="pay">Pay</button>
+             {/* <button type="submit" class="pay" onClick={shoot}>Pay</button> */}
+             <Pop onClick={shoot}/>
              </form>
              </div>
 </div>
     )
+
 }
 

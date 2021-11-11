@@ -1,6 +1,7 @@
 import React from "react";
-import "./App.css";
+import "./Component/Mycard.css";
 import MyCards from "./Component/Mycard";
+
 
 function App() {
 	return (
