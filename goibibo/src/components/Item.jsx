@@ -22,7 +22,7 @@ const Item = ({logo,desc,valid,arrow}) => {
                 
             <p className = "desc">{desc}</p>
             <p>{valid}</p>
-            <p> {arrow} </p>
+            {/* <p> {arrow} </p> */}
                 
                 
 
