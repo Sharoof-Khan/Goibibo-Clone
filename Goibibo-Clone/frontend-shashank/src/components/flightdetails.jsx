@@ -14,7 +14,10 @@ function Flight()
 
     const [ticketType,setTickettype]=useState("")
 
-    const [show_ticket,setShow_ticket]=useState(false)
+    const [show_ticket,setShow_ticket]=useState(false);
+
+    const [from,setForm]=useState("pune");
+
 
     useEffect(()=>{
 
@@ -25,7 +28,7 @@ function Flight()
           console.log(response.data)
         })
         
-    },[])
+    },[from])
 
     const [adult,setAdult]=useState(0)
     const [children,setChildren]=useState(0)
@@ -56,6 +59,8 @@ const handleCount=(value)=>{
     const handleForm=(e)=>{
         e.preventDefault()
         console.log("curr _data",curr_data)
+        setForm(curr_data.from)
+        
 
     }
 
@@ -90,6 +95,7 @@ const handleCount=(value)=>{
 
 
             {/* searchbox */}
+            
             <div className="input_data">
 
             <div style={{display:"flex",justifyContent:"left",margin:"0 130px "}}>
@@ -202,7 +208,7 @@ const handleCount=(value)=>{
             </div>
 
             <div className="details_flight">
-            {data.map((e)=>(
+            {data.filter((e)=>(e.from===`${from}` && e.date==="2021-11-11") ).map((e)=>(
                 <div className="particular_flight">
                     <div className="curr_flight">
                         

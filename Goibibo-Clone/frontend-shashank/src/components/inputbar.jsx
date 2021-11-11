@@ -2,6 +2,8 @@ import {  useState } from "react"
 
 import "./inputbar.css"
 
+import {Link} from 'react-router-dom';
+
 function Inputbar()
 {
     const [adult,setAdult]=useState(0)
@@ -84,7 +86,8 @@ const handleCount=(value)=>{
                 <div onClick={()=>setShow_ticket(!show_ticket)} style={{width:"200px",border:"1px solid black"}} >{count} travellers,{ticketType}</div>
 
                
-               <input type="submit" value="SEARCH"></input>
+               {/* <input type="submit" value="SEARCH"> </input> */}
+               <button type="submit"><Link to="/flights">SEARCH</Link> </button>
 
             </form>
 

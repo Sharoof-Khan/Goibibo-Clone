@@ -79,7 +79,7 @@
 
 .form_input>input:nth-child(6)
   {
-      background-color: white;
+      background-color: white !important;
       width: 12%;
       height: 75px;
       margin: 0px 10px;
