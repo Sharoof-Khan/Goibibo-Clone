@@ -105,7 +105,7 @@ const onSubmit =(e)=>{
                      <div class="form-data">
                      <div class="flex-group">
                 <h3>Card Number</h3>
-                 <input value = {number} onChange={(e)=>{setNumber(e.target.value)}} pattern="[0-9]*" inputmode="numeric"  class="card-number" placeholder="Card Number"/>
+                 <input value = {number} onChange={(e)=>{setNumber(e.target.value)}} pattern="[0-9]*" inputmode="numeric"   class="card-number" placeholder="Card Number"/>
                  {Object.keys(numberErr).map((key) => {
                      return <div style={{color:"red"}}>{numberErr[key]}</div>
                      })}
