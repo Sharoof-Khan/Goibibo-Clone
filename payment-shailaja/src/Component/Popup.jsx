@@ -29,7 +29,7 @@ export default function CustomModal () {
               close();
             }}
           >
-            close modal
+            Close Now
           </button>
         </div>
       </div>

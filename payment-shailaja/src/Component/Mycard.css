@@ -63,11 +63,11 @@ margin:2%;
 }
 .card-number[type=text]:focus{
     outline: 0.5px solid rgb(65, 133, 236);  
-    box-shadow: 1px 1px 1px 0px  rgb(118, 170, 248); ;   
+    box-shadow: 0px 0px 1px 0px  rgb(118, 170, 248); ;   
   }
   .card-number[inputmode=numeric]:focus{
     outline: 0.5px solid rgb(65, 133, 236);  
-    box-shadow: 1px 1px 1px 0px  rgb(118, 170, 248); ;   
+    box-shadow: 0px 0px 1px 0px  rgb(118, 170, 248); ;   
   }
   .card[type=text]:focus{
     outline: 0.5px solid rgb(136, 136, 136);  
@@ -169,7 +169,7 @@ button{
     color:white;
     border: none;
     cursor: pointer;
-    margin-left:10%;
+    margin-right:1%;
     margin-top:2%;
     border-radius: 100px 100px;
 }
