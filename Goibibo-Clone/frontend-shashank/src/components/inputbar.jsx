@@ -63,8 +63,12 @@ const handleCount=(value)=>{
 
     return(
         <div className={"parent"}>
-          <h2 style={{textAlign:"left",margin:"0px 130px",color:"white"}}>Domestic and international flights</h2>
-            
+          <h2 style={{textAlign:"left",margin:"0px 65px",color:"white",padding:"10px" }}>Domestic and international flights</h2>
+
+         {/* swap button */}
+        {/* <div className="swapbutton">
+            <button ><img src="https://cdn-icons-png.flaticon.com/512/61/61165.png"></img></button>
+        </div>        */}
 
         <div className="roundSection">
             <div>
@@ -78,20 +82,22 @@ const handleCount=(value)=>{
             </div>
         </div>
 
+        
+
             <form className="form_input" onSubmit={handleForm}>
                 <input placeholder="From" name="from" onChange={handlechange}></input>
                 <input placeholder="Destination" name="destination" onChange={handlechange}></input>
                 <input  type="text"   onFocus={(e) => e.target.type = 'date'} placeholder="Departure" name="departure" onChange={handlechange}></input>
                 <input type="text"   onFocus={(e) => e.target.type = 'date'}  placeholder="Return" name="return" onChange={handlechange}></input>
-                <div onClick={()=>setShow_ticket(!show_ticket)} style={{width:"200px",border:"1px solid black"}} >{count} travellers,{ticketType}</div>
+                <div onClick={()=>setShow_ticket(!show_ticket)} style={{width:"200px",outline:"none",textAlign:"center",padding:"30px 10px",borderTopRightRadius:"5px",borderBottomRightRadius:"5px" }} >{count} travellers,{ticketType}</div>
 
                
                {/* <input type="submit" value="SEARCH"> </input> */}
-               <button type="submit"><Link to="/flights">SEARCH</Link> </button>
+               <button type="submit" style={{backgroundColor:"#f37638",borderRadius:"8px",border:"none" , width: "7%",color:"white"}}><Link to="/flights">SEARCH</Link> </button>
 
             </form>
 
-            <div style={{display:"flex",justifyContent:"left" ,margin:"0px 130px"}} >
+            <div style={{display:"flex",justifyContent:"left" ,margin:"0px 70px"}} >
          <input type="checkbox"></input>    Student Fare 
                 <input type="checkbox"></input>Defence Fare
                 <input type="checkbox" ></input>Senior Citizen Fare

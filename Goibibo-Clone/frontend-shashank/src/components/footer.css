@@ -12,10 +12,11 @@ body {
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
     z-index: 900;
     text-align: left;
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(6, 16.5%);
     padding: 50px;
     border-bottom: 0.3px solid rgb(204,204,204);
+    justify-content: space-around;
   }
   
   .Bottom-Container > div > p:nth-child(1) {
@@ -106,4 +107,3 @@ body {
     color: gray;
     font-size: small;
   }
-  

@@ -1,3 +1,7 @@
+*{
+    font-family: Quicksand,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 .background-col {
     width: 92rem;
     height: 95rem;
@@ -26,21 +30,24 @@
       display: flex;
       background-color: white;
       width: 23%;
-      margin: 0px 130px;
+      margin: 0px 58px;
       border-radius: 15px;
 
       
   }
 
-  .roundSection >div{
+  .roundSection >div {
+      
       margin: 3px;    
-      border-radius: 10px;
+      border-radius: 17px;
+      padding: 10px;
   }
 
   .roundSection >:nth-child(1)
   {
       background-color: #2276e3;
       color: white;
+      padding: 10px;
   }
   .roundSection >:nth-child(2):hover
   {
@@ -59,38 +66,53 @@
       justify-content: center;
       margin: 10px 50px;
       border-radius: 10px;
+      font-family: Quicksand,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
   }
   .form_input>div{
       background-color: white;
+    border: none;
+      border-right: 1px solid black;
+      outline: none;
+      margin-right: 15px;
       border-radius: 5px;
-      border:none
+
   }
+
+  
 
   .form_input>input{
       width: 15%;
       height: 70px;
       border:none;
       outline: none;
+      padding: 10px 20px;
+      border-right: 1px solid black;
+      color: black;
+      
       
   }
 
   .form_input>input:nth-child(6)
   {
-      background-color: orangered !important;
+      background-color: orange ;
       width: 7%;
       height: 75px;
       margin: 0px 10px;
       border-radius: 8px;
-      border:none
+      border:none;
+     
 
   }
 
   .form_input>input:nth-child(1)
   {
-      border-radius: 5px;
+     
       border-top: none;
-      border:none
+      border:none;
+      border-right: 1px solid black;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
   }
 
   .parent{
@@ -107,7 +129,25 @@
     width: 30%;
     background-color: white;
     border: 1px solid black;
+    color: black;
 
     
   }
+
+
+.swapbutton{
+    position: absolute;
+    top: 10px;
+    left: 205px;
+}
+
+.swapbutton >button{
+  border-radius: 50%;
+}
+
+.swapbutton >button >img{
+    width: 10px;
+    height: 10px;
+    
+}
 

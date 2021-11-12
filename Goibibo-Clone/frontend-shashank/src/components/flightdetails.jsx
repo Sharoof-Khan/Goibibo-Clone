@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import "./flightdetails.css";
+import "./details.css"
 
 
 const axios = require('axios').default;
@@ -16,7 +17,7 @@ function Flight()
 
     const [show_ticket,setShow_ticket]=useState(false);
 
-    const [from,setForm]=useState("pune");
+    const [from,setForm]=useState("delhi");
 
 
     useEffect(()=>{
@@ -25,7 +26,7 @@ function Flight()
         .then(function (response) {
          
           setData(response.data);
-          console.log(response.data)
+          console.log("response",response.data)
         })
         
     },[from])
@@ -96,30 +97,68 @@ const handleCount=(value)=>{
 
             {/* searchbox */}
             
+            
             <div className="input_data">
 
-            <div style={{display:"flex",justifyContent:"left",margin:"0 130px "}}>
-            <input type="radio" value="one way"></input>one way
-            <input type="radio" value=""></input>round trip
+            <div style={{display:"flex",justifyContent:"left",margin:"0 55px "}}>
+            <input type="radio" value="one way"></input>One way
+            <input type="radio" value=""></input>Round trip
+            </div>
+
+            {/* <div className="swapbutton">
+            <button ><img src="https://cdn-icons-png.flaticon.com/512/61/61165.png"></img></button>
+        </div>    */}
+
+           
+            
+        <form onSubmit={handleForm}>
+            <div className="parent1">
+
+            <div className="child1">
+             <label>From</label>   
+             <input  name="from" onChange={handlechange}></input>
+            </div>
+
+            <div className="child1">
+            <label>Destination</label>   
+            <input name="destination" onChange={handlechange}></input>
             </div>
             
-            <form className="form_input" onSubmit={handleForm}>
-                <input placeholder="From" name="from" onChange={handlechange}></input>
-                <input placeholder="Destination" name="destination" onChange={handlechange}></input>
-                <input  type="text"   onFocus={(e) => e.target.type = 'date'} placeholder="Departure" name="departure" onChange={handlechange}></input>
-                <input type="text"   onFocus={(e) => e.target.type = 'date'}  placeholder="Return" name="return" onChange={handlechange}></input>
-                <div onClick={()=>setShow_ticket(!show_ticket)} style={{width:"200px",border:"1px solid black"}} >{count} travellers,{ticketType}</div>
+           <div className="child1">
+           <label>Departure</label>   
+           <input  type="text"   onFocus={(e) => e.target.type = 'date'}  name="departure" onChange={handlechange}></input>
+               </div>
+            
+            <div className="child1">
+            <label>Return</label>   
+            <input type="text"   onFocus={(e) => e.target.type = 'date'}  name="return" onChange={handlechange}></input>
+            </div>
 
-               
-               <input type="submit" value="UPDATE SEARCH"></input>
 
+             <div className="child1">  
+             <label>Passenger & class</label>
+             <div style={{height:"98%",padding:"15px",backgroundColor:"rgb(25, 88, 182)",borderRadius:"8px"}} onClick={()=>setShow_ticket(!show_ticket)}  >{count} travellers,{ticketType}</div>
+             </div>
+
+            <div className="child1">
+                <hr></hr>
+            <input type="submit" value="UPDATE SEARCH"></input>
+            </div>
+            
+
+            </div>
             </form>
 
-            <div style={{display:"flex",justifyContent:"left" ,margin:"0px 130px"}} >
-         <input type="radio"></input>    Student Fare 
-                <input type="radio"></input>Defence Fare
-                <input type="radio" ></input>Senior Citizen Fare
-                <input type="radio"></input>Show extra Seat Option
+            <div style={{display:"flex",textAlign:"left",margin:"0px 60px ",marginBottom:"5px"}}>
+                Fare
+            </div>
+
+            <div className="fare" >
+                <input type="radio"></input> REGULAR
+                <input type="radio"></input>DEFENCE
+                <input type="radio" ></input>SENIOR CITIZEN
+                <input type="radio"></input>STUDENT
+                <input type="radio"></input>EXTRA SEAT
             </div>
 
              {/* travelling class selection */}
@@ -181,9 +220,14 @@ const handleCount=(value)=>{
 
             
             {/* tickets display section */}
+
+            
+
+           
             <div className="body">
             <div className="filters" >
             <h3>Filters</h3>
+            <hr></hr>
 
             {/*  filter departure div */}
             <div >
@@ -204,35 +248,77 @@ const handleCount=(value)=>{
                 </div>
                
             </div>
+            <hr></hr>
+
+               {/* filter Stops div  */}
+            <div>
+            <h4>Stops</h4>
+            <div className="departures">
+            <div  >Direct</div>
+            <div> 1 Stop</div>
+            </div>
+
+            </div>
+
+            <hr></hr>
+
+
+            <div>
+            <h4>Preffered Airlines</h4>
+            <div className="departures" style={{flexDirection:'column' }}>
+             <div className="checkbox_color">
+             <input type="checkbox" value="" ></input><img src="https://play-lh.googleusercontent.com/OhZSLjRDLvFLqtDp9bIgcvAweZIg5V5uIMI_7kOaS-9nPR043DUfoibkn1BgwG7Ai1U"></img>Indigo
+            </div>
+            <div className="checkbox_color" >
+             <input type="checkbox" value=""></input><img src="https://play-lh.googleusercontent.com/OhZSLjRDLvFLqtDp9bIgcvAweZIg5V5uIMI_7kOaS-9nPR043DUfoibkn1BgwG7Ai1U"></img>Airindia
+            </div> 
+            <div className="checkbox_color">
+             <input type="checkbox" value=""></input><img src="https://play-lh.googleusercontent.com/OhZSLjRDLvFLqtDp9bIgcvAweZIg5V5uIMI_7kOaS-9nPR043DUfoibkn1BgwG7Ai1U"></img>Go First
+            </div> 
+            <div className="checkbox_color">
+             <input type="checkbox" value=""></input><img src="https://play-lh.googleusercontent.com/OhZSLjRDLvFLqtDp9bIgcvAweZIg5V5uIMI_7kOaS-9nPR043DUfoibkn1BgwG7Ai1U"></img>Indigo
+            </div>    
+            
+            </div>
+
+            </div>
+
+           
                 
             </div>
 
             <div className="details_flight">
-            {data.filter((e)=>(e.from===`${from}` && e.date==="2021-11-11") ).map((e)=>(
+            {data.filter((e)=>(e.from===`${from}`) ).map((e)=>(
                 <div className="particular_flight">
                     <div className="curr_flight">
                         
-                         <div><img src={e.img}></img>{e.company}</div>
-                         <div>{e.from}</div>
-                         <div>{e.fromTime}</div>
+                         <div ><img src={e.img}></img>  {  e.company}</div>
+                         <div className="topHeading">{e.from},India</div>
+                         <div className="curr_flight_time">{e.fromTime}</div>
                     </div>
                 
-                  <div>{e.duration}</div>
+                  <div style={{margin:"auto 0px" ,fontSize:"1.0rem"}}>{e.duration}</div>
                 <div>
-                <div>{e.to}</div>
-                <div>{e.toTime}</div>
+                 <br></br>   
+                <div className="topHeading" style={{margin:"4px"}}>{e.to},India</div>
+                <div className="curr_flight_time">{e.toTime}</div>
                  </div>
 
-                 <div>${e.price}</div>   
+                <div style={{margin:"auto 0px" ,fontSize:"1.2rem"}}>
+                <div ><del>&#2352;</del> {e.price}</div>   
                 
-           
-                <button onClick={()=>{
+                </div>
+                 
+           <div>
+           <button onClick={()=>{
                     console.log(e)
                     handlebook(e)
 
                     
                 }}>BOOK</button>
                 <br></br>
+           </div>
+                
                 </div>
                 
                 
